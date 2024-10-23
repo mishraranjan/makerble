@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makerble - My Home</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Makerble</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row vh-100"> <!-- Full height for the row -->
+            <!-- Sidebar Navigation -->
+            <nav class="col-md-3 col-lg-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky h-100"> <!-- Full height for the sidebar -->
+                    <h5 class="text-center">Navigation</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="showSection('stories')" href="#">Create a Story</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" onclick="showSection('activities')" href="#">Recent Activities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="showSection('projects')" href="#">My Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="showSection('contacts')" href="#">My Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="showSection('tasks')" href="#">Tasks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="showSection('followers')" href="#">Followers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="showSection('organization')" href="#">Organization</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="showSection('albums')" href="#">Albums</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div id="activities" class="section mt-4">
+                    <h2>Recent Activities</h2>
+                    <div class="alert alert-info">No recent activities to display.</div>
+                </div>
+                <div id="projects" class="section mt-4" style="display: none;">
+                    <h2>My Projects</h2>
+                    <div class="alert alert-info">No projects to display.</div>
+                </div>
+                <div id="contacts" class="section mt-4" style="display: none;">
+                    <h2>My Contacts</h2>
+                    <div class="alert alert-info">No contacts to display.</div>
+                </div>
+                <div id="tasks" class="section mt-4" style="display: none;">
+                    <h2>Tasks</h2>
+                    <div class="alert alert-info">No tasks to display.</div>
+                </div>
+                <div id="followers" class="section mt-4" style="display: none;">
+                    <h2>Followers</h2>
+                    <div class="alert alert-info">No followers to display.</div>
+                </div>
+                <div id="organization" class="section mt-4" style="display: none;">
+                    <h2>Organization</h2>
+                    <div class="alert alert-info">No organization details to display.</div>
+                </div>
+                <div id="albums" class="section mt-4" style="display: none;">
+                    <h2>Albums</h2>
+                    <div class="alert alert-info">No albums to display.</div>
+                </div>
+                <div id="stories" class="section mt-4" style="display: none;">
+                    <h2>Create a Story</h2>
+                    <form id="storyForm">
+                        <div class="form-group">
+                            <label for="storyTitle">Title</label>
+                            <input type="text" class="form-control" id="storyTitle" required>
+                            <small id="titleHelp" class="form-text text-muted">Minimum 3 characters.</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Story</button>
+                    </form>
+                    <div id="storyMessage" class="mt-3"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

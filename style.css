@@ -1,0 +1,37 @@
+body {
+    background-color: #f8f9fa; /* Light background color */
+}
+
+h1, h2 {
+    color: #007bff; /* Primary color for headings */
+}
+
+.section {
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    height: 100vh; /* Full height for sidebar */
+    position: sticky;
+    top: 0; /* Keeps the sidebar fixed when scrolling */
+}
+
+.sidebar .nav-link {
+    color: #333; /* Dark text for navigation links */
+}
+
+.sidebar .nav-link.active {
+    font-weight: bold;
+    color: #007bff; /* Highlight active link */
+}
+
+/* For smaller screens */
+@media (max-width: 767px) {
+    .sidebar {
+        position: relative; /* Change position for mobile */
+        height: auto; /* Auto height for mobile */
+    }
+}
